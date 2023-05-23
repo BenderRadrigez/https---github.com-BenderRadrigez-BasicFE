@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html,
+      body,
+      .conteiner {
+        height: 100%;
+      }
+      body{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      .conteiner {
+        display: flex;
+        width: 100%;
+        max-width: 960px;
+      }
+      .left {
+        background: rgb(97, 97, 253);
+        flex: 1;
+      }
+      .right {
+        background: rgb(255, 109, 109);
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      form{
+        background: green;
+        width: 300px;
+        aspect-ratio: 2/3;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="conteiner">
+      <div class="left"></div>
+      <div class="right">
+        <form></form>
+      </div>
+    </div>
+  </body>
+</html>

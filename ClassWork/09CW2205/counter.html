@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .conteiner{
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%,-50%);
+            width: 250px;
+            height: 200px;
+            background: lightgray;
+            display: flex;
+            align-items: center;
+            flex-direction: column;
+            border: 1px solid;
+            border-radius: 15px;
+        }
+        .conteiner textarea{
+            background: lightgray;
+            border: none;
+            outline: none;
+            margin: 10px 0;
+            font-size: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="conteiner">
+        <textarea maxlength="50" cols="30" rows="10" oninput="update_counter()"></textarea>
+
+    <p>
+        Осталось
+        <span id="counter">50</span>
+        /50
+    </p>
+    </div>
+
+    <script>
+        const textarea = document.querySelector('textarea'); // найти поле ввода
+        const counter = document.querySelector('#counter'); // найти элемент счетчик
+        function update_counter() {
+            counter.textContent = textarea.getAttribute('maxlength') - textarea.value.length; // кол-во символов в поле ввода
+        }
+    </script>
+</body>
+</html>

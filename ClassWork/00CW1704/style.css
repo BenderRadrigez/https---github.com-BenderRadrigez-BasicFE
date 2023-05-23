@@ -1,0 +1,44 @@
+body{
+    background-color: #000;     /*цвет фона*/
+    color: #fff;                /*цвет*/
+    text-align: center;           /*центрирование текста*/
+    margin: 0;                    /*внешний отступ*/
+}
+
+h1 {
+    background-color: gold;
+    border: 3px solid red;      /*границы*/
+    border-radius: 15px;          /*радиус углов*/
+    color: blue;
+    padding: 20px;                /*внутренний отступ*/
+    margin: 40px 0 40px 0;
+}
+h2{
+    color: cyan;
+}
+
+p{
+    text-align: justify;        /*растягивание текста по границам*/
+    line-height: 2;             /*отступы по-вертикали*/
+    text-indent: 40px;          /*красная строка - отступы*/
+    letter-spacing: 5px;        /*отступы между символами*/
+}
+
+img {
+    border-radius: 15%;
+}
+
+a {
+    color: red;
+    font-size: 55px;             /*размер*/
+}
+
+ul {
+    list-style: none;           /*стиль таблицы*/
+}
+
+ul li {
+    line-height: 2;             /*границы высоты ячейки*/
+    color: orange;
+    font-weight: 1000;          /*жирность текста*/
+}

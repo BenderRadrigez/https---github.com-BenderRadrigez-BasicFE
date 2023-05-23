@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans:wght@400;700&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #e5e5e5;
+  font-family: 'PT Sans', sans-serif;
+}
+/* ------- all block settings in the body -------- */
+.main {
+  width: 1240px;
+  height: 930px;
+  position: relative;
+  left: 20%;
+}
+.window {
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  background: #fff;
+  border-radius: 20px;
+  position: absolute;
+}
+.left,
+.header {
+  top: 80px;
+}
+.left {
+  left: 80px;
+  width: 255px;
+  height: 770px;
+  background: #f2f2f2;
+}
+.header,
+.messenger {
+  left: 360px;
+}
+.header {
+  height: 90px;
+  width: 770px;
+}
+.messenger,
+.team {
+  top: 195px;
+}
+.messenger {
+  width: 350px;
+  height: 655px;
+}
+.team,
+.project-onboarding {
+  left: 740px;
+  width: 390px;
+}
+.team {
+  height: 325px;
+}
+.project-onboarding {
+  top: 544px;
+  height: 305px;
+}
+/* ------- .left menu settings -------- */
+ 
+/* ------- .header settings -------- */
+
+/* ------- .message settings -------- */
+
+/* ------- .team settings -------- */
+
+/* ------- .project-onboarding settings -------- */

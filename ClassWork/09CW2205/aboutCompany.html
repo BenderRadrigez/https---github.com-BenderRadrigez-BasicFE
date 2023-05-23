@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Company</title>
+
+    <style>
+        .row{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        aside{
+            position:fixed;
+            left: 0;
+            top: 0;
+            height: 100%;
+            width: 250px;
+            background: tomato;
+            transform: translateX(-250px);
+            transition: .5s;
+        }
+        aside.is-open{
+            transform: translateX(0);
+        }
+    </style>
+</head>
+<body>
+    <aside>
+    </aside>
+
+    <div class="row">
+        <h1>About Company</h1>
+        <button onclick="toggle_menu()">тут бургер</button>
+    </div>
+
+    <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci consequatur optio distinctio nemo neque dolores nihil maiores vero excepturi delectus temporibus, autem perspiciatis exercitationem mollitia minus magnam inventore omnis, ipsa ducimus! Beatae corporis doloribus expedita tempora ex tempore eius impedit magni quis, harum et id accusamus quod modi iste fugit aperiam cumque a deserunt repellendus exercitationem repellat quasi necessitatibus. Perferendis dolore perspiciatis quibusdam neque. Rerum eos maxime, fugiat dolor dolores iusto aspernatur soluta aperiam possimus nostrum adipisci consectetur vero itaque cupiditate enim officia cum sequi expedita hic. Itaque enim officiis fuga officia quos aut, quidem odio ad fugiat tempore in illum vel recusandae quae ullam fugit repudiandae mollitia totam dolor amet! Velit alias distinctio magni quidem fugiat suscipit adipisci maxime? Aut vero ut, illum similique iusto, amet aspernatur nobis cum beatae inventore quia. Temporibus unde dolor illum minus est quidem laboriosam distinctio architecto voluptate? Fuga, dolores quaerat nesciunt modi rem, ullam cum, eos possimus saepe aliquam officia vitae veniam tempora pariatur. Amet eveniet sunt quod animi natus nostrum asperiores aut. Officiis voluptatem at eius dolorum accusamus, vero cum praesentium dolores beatae dolore soluta facilis ratione impedit provident autem, magni optio rerum harum aspernatur cupiditate repudiandae. Porro magni ipsum, expedita repellat perferendis, qui distinctio molestiae obcaecati laudantium, neque ducimus dignissimos reprehenderit harum tenetur? Modi quae assumenda placeat hic, quibusdam sapiente explicabo ipsa iure rem magni! Deserunt maiores debitis nobis dolor assumenda eveniet sed error, velit voluptates illum explicabo dolorum tempora dignissimos, in doloribus aut. Voluptatum quidem tempore quis cupiditate explicabo sit sequi beatae dolorem incidunt id quibusdam sed voluptas numquam deleniti vel perspiciatis ullam facilis, dolores voluptate! Aliquid vitae fugiat autem. Enim reprehenderit iste optio cumque! Voluptate fugit architecto voluptatem accusantium suscipit soluta vel repellendus, blanditiis nulla deserunt sapiente, sint odio similique ipsam consectetur recusandae expedita. Est quibusdam sit iure nostrum?
+    </p>
+
+    <script src="about.js"></script>
+</body>
+</html>

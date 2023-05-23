@@ -1,0 +1,65 @@
+body {
+  background: #ddecfa;
+  margin: 0;
+}
+
+.headerString {
+  display: flex;
+  background-color: #346dc4;
+  border-radius: 0 0 15px 15px;
+}
+
+.headerString img {
+  border-radius: 0 0 0 15px;
+  width: 200px;
+}
+
+.headerString h1 {
+  margin: auto;
+  color: #fff;
+}
+
+.info,
+.contacts {
+  margin: 15px;
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  text-align: center;
+}
+
+ul li {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.info ul li img {
+  padding: 10px;
+  width: 200px;
+  height: 200px;
+  border-radius: 50px;
+}
+.info ul li img:hover {
+  padding: 0;
+  width: 210px;
+  height: 210px;
+}
+
+p {
+  padding-inline: 50px;
+}
+
+.contacts ul li {
+  font-size: 70px;
+}
+
+.contacts ul li:hover {
+  font-size: 75px;
+}
+
+.contacts ul li a:hover {
+  color: red;
+}
