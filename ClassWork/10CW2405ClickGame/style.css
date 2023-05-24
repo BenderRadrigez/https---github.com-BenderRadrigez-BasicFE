@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: #973e3e;
+}
+#area {
+  background: #fff;
+  width: 400px;
+  aspect-ratio: 1;
+  margin-top: 200px;
+  overflow: hidden;
+}
+#object {
+  width: 60px;
+  aspect-ratio: 1;
+  background: #1f12da;
+  transform: translateY(-100%);
+  position: relative;
+}
+#object.start {
+  animation-name: movement;
+  animation-duration: 1.5s;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+@keyframes movement {
+  to {
+    transform: translateY(400px);
+  }
+}
