@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <button onclick="makeNewList()">klick me</button>
+
+    <script>
+      function makeNewList() {
+        const newList = document.createElement("ul");
+        document.body.appendChild(newList);
+
+        for (let i = 0; i < 10; i++) {
+          const li = document.createElement("li");
+          li.textContent = i + 1;
+          newList.appendChild(li);
+        }
+      }
+    </script>
+  </body>
+</html>
