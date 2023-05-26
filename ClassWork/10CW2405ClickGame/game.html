@@ -6,17 +6,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Click game</title>
     <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
   </head>
   <body>
     <div id="playground">
       <header>
-        <button onclick="start_game()" id="start">start game</button>
+        <h1>click game</h1>
+        <p id="score">0</p>
       </header>
 
       <div id="area" onmousedown="miss(event)">
-        <div id="object" onmousedown="hit()"></div>
+        <div id="object" onmousedown="hit()">
+          <img src="images/apple.png" alt="" />
+        </div>
+      </div>
+
+      <div id="buttons">
+        <button onclick="start_game()" id="start">
+          <i class="las la-play"></i>
+          <p>START GAME</p>
+        </button>
       </div>
     </div>
+
     <script src="script.js"></script>
   </body>
 </html>

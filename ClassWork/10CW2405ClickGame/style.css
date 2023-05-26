@@ -1,26 +1,60 @@
+/* ---------- Main sattings ----------*/
+@import url('https://fonts.googleapis.com/css2?family=Rubik+Puddles&display=swap');
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: 'Rubik Puddles', cursive;
 }
-
 body {
   height: 100vh;
-  background: #973e3e;
+  background: #360033;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #0b8793, #360033);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #0b8793, #360033); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset,
+    rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 }
+#playground {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+/* ----------- header ----------- */
+header {
+  text-align: center;
+  color: #fff;
+}
+header h1 {
+  font-size: 3rem;
+  margin: 20px 0 30px 0;
+}
+header p {
+  font-size: 2rem;
+  margin-bottom: 30px;
+}
+/*---------- game zone ----------*/
 #area {
-  background: #fff;
+  background: #ffffffab;
   width: 400px;
   aspect-ratio: 1;
-  margin-top: 200px;
   overflow: hidden;
+  border-radius: 15px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+/* ---------- game objeect ---------- */
 #object {
   width: 60px;
   aspect-ratio: 1;
-  background: #1f12da;
   transform: translateY(-100%);
   position: relative;
+}
+#object img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 #object.start {
   animation-name: movement;
@@ -32,4 +66,21 @@ body {
   to {
     transform: translateY(400px);
   }
+}
+/* ---------- buttons ---------- */
+#buttons {
+  margin-top: 100px;
+  padding: 10px;
+}
+#buttons button {
+  padding: 10px 40px;
+  border-radius: 15px;
+  border: none;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  font-size: 10px;
+  background: #6721eb;
+  color: #fff;
+}
+#buttons button i {
+  font-size: 50px;
 }
