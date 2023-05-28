@@ -4,8 +4,7 @@ function start_game() {
   counterLifes = 3;
   printCounter(score);
   playSound(startSound);
-  removeLifes();
-  makeLifes(counterLifes);
+  remakeLifes(counterLifes);
 }
 
 function end_game() {
@@ -16,9 +15,8 @@ function end_game() {
 
 function miss(event) {
   if (event.target.id == "area") {
-    removeLifes();
     counterLifes--;
-    makeLifes(counterLifes);
+    remakeLifes();
     printCounter(score);
     playSound(missSound);
     if (counterLifes == 0) {
@@ -52,7 +50,7 @@ function playSound(sound) {
   sound.currentTime = 0;
   sound.play();
 }
-
+// создает список элементов для показа колличества жизней
 function makeLifes(counter) {
   let lifeUl = document.createElement("ul");
   lifeUl.classList.add("lifes");
@@ -65,9 +63,11 @@ function makeLifes(counter) {
     lifeLi.appendChild(lifeImg);
   }
 }
-function removeLifes() {
+// обновляет список жизней
+function remakeLifes() {
   let lifeUl = document.querySelector(".lifes");
   header.removeChild(lifeUl);
+  makeLifes(counterLifes);
 }
 
 let score = 0;
