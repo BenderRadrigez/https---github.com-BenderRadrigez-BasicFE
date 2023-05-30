@@ -1,33 +1,33 @@
-function start_game() {
+function StartGame() {
   object.classList.toggle("start");
   score = 0;
   counterLifes = 3;
-  printCounter(score);
-  playSound(startSound);
-  remakeLifes(counterLifes);
+  PrintCounter(score);
+  PlaySound(startSound);
+  RemakeLifes(counterLifes);
 }
 
-function end_game() {
-  playSound(endSound);
+function EndGame() {
+  PlaySound(endSound);
   object.classList.remove("start");
   alert(`your score: ${score}`);
 }
 
-function miss(event) {
+function Miss(event) {
   if (event.target.id == "area") {
     counterLifes--;
-    remakeLifes();
-    printCounter(score);
-    playSound(missSound);
+    RemakeLifes();
+    PrintCounter(score);
+    PlaySound(missSound);
     if (counterLifes == 0) {
-      end_game();
+      EndGame();
     }
   }
 }
 
-function hit() {
+function Hit() {
   score++;
-  printCounter(score);
+  PrintCounter(score);
 
   object.classList.remove("start");
   void object.offsetWidth;
@@ -37,21 +37,21 @@ function hit() {
 
   object.style.left = `${randomPositionX}px`;
 
-  playSound(hitSound);
+  PlaySound(hitSound);
 }
 
-function printCounter(score) {
+function PrintCounter(score) {
   document.querySelector("#score").textContent = score;
   document.title = `score: ${score}`;
 }
 
 // проигрывает звук без задержки
-function playSound(sound) {
+function PlaySound(sound) {
   sound.currentTime = 0;
   sound.play();
 }
 // создает список элементов для показа колличества жизней
-function makeLifes(counter) {
+function MakeLifes(counter) {
   let lifeUl = document.createElement("ul");
   lifeUl.classList.add("lifes");
   header.appendChild(lifeUl);
@@ -64,10 +64,10 @@ function makeLifes(counter) {
   }
 }
 // обновляет список жизней
-function remakeLifes() {
+function RemakeLifes() {
   let lifeUl = document.querySelector(".lifes");
   header.removeChild(lifeUl);
-  makeLifes(counterLifes);
+  MakeLifes(counterLifes);
 }
 
 let score = 0;
@@ -80,4 +80,4 @@ let missSound = new Audio("sounds/miss.wav");
 let startSound = new Audio("sounds/start.wav");
 let endSound = new Audio("sounds/gameover.wav");
 
-makeLifes(counterLifes);
+MakeLifes(counterLifes);
