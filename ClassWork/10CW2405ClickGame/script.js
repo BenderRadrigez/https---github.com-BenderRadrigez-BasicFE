@@ -21,6 +21,7 @@ function Miss(event) {
     RemakeLifes();
     PrintCounter(score);
     PlaySound(missSound);
+
     if (counterLifes == 0) {
       EndGame();
     }
