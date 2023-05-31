@@ -1,5 +1,7 @@
 function StartGame() {
   object.classList.toggle("start");
+  objSpeed = 1.5;
+  objScale = 60;
   score = 0;
   counterLifes = 3;
   PrintCounter(score);
@@ -38,7 +40,36 @@ function Hit() {
   object.style.left = `${randomPositionX}px`;
 
   PlaySound(hitSound);
+
+  if (score % 5 == 0) {
+    IncreaseSpeed();
+  }
+  ChangeScale();
+  // ChangeColorObj();
 }
+
+function IncreaseSpeed() {
+  if (objSpeed >= 0.5) {
+    objSpeed -= 0.1;
+    object.style.animationDuration = `${objSpeed}s`;
+  }
+}
+function ChangeScale() {
+  let randomScale = Math.random() * 100;
+
+  if (randomScale < 30) {
+    randomScale = 30;
+  } else if (randomScale > 80) {
+    randomScale = 80;
+  }
+  object.style.width = `${randomScale}px`;
+}
+// измеенение цвета плитки
+// function ChangeColorObj() {
+//   let colors = ["red", "gold", "blue", "green", 'tomato'];
+//   let randomIndex = Math.floor(Math.random() * colors.length);
+//   object.style.background = colors[randomIndex];
+// }
 
 function PrintCounter(score) {
   document.querySelector("#score").textContent = score;
@@ -70,7 +101,9 @@ function RemakeLifes() {
   MakeLifes(counterLifes);
 }
 
-let score = 0;
+let objSpeed;
+let objScale;
+let score;
 let counterLifes = 3;
 let object = document.querySelector("#object");
 let header = document.querySelector("#header");
